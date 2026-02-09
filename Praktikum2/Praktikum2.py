@@ -2,7 +2,7 @@
 #Latihan 1 Membuat fungsi load data dari file 
 
 #Variable menyimpan data
-nama_file = "data_mahasiswa.txt" 
+nama_file = "Praktikum2/data_mahasiswa.txt" 
 
 def baca_data(nama_file):
     data_dict = {} #menginisialisasi dictionary
@@ -129,5 +129,4 @@ def main():
         else :
             print("Pilihan tidak Valid") # Kalo ga bener mengisi inout
         
-if __name__ == "__main__":
-    main()
+main()
