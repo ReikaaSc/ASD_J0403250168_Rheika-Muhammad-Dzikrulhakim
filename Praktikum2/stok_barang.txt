@@ -1,0 +1,4 @@
+BRG001,Pensil,110
+BRG002,Pulpen,20
+BRG003,Buku,15
+BRG004,Chitato,20

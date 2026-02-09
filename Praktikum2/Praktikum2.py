@@ -7,8 +7,8 @@ nama_file = "Praktikum2/data_mahasiswa.txt"
 def baca_data(nama_file):
     data_dict = {} #menginisialisasi dictionary
     with open(nama_file, "r", encoding="utf-8") as file :
-        for baris in file :
-            baris = baris.strip()#mengambil data dan menghilangka new line
+        or baris in file :
+            baris = baris.strip()#mengambil data dan menghilangka new lfine
             nim, nama, nilai = baris.split(",") # ambil data per item data
             data_dict[nim] = {"nama": nama, "nilai": int(nilai)}# masukan dalam
     return data_dict
@@ -94,7 +94,7 @@ def simpan_data(nama_file, data_dict):
             nilai = data_dict[nim]["nilai"]
             file.write(f"{nim},{nama},{nilai}\n")
             
-# Memanggil fungsi simpan
+# Memanggil fungsi simpan   
 # simpan_data(nama_file,buka_data)
 # print("\nData berhasil Disimpan ke file :",nama_file)
 
