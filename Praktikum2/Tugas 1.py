@@ -83,20 +83,16 @@ def tambah_barang(stok_dict):
         print("Kode sudah ada")
         
     try:
-        stok_awal = int(input("Masukkan stok awal: "))
-        if stok_awal < 0:
-            print("Stok tidak boleh negatif")
-            return
-    except ValueError:
-        print("Stok harus berupa angka")
-        return
-        
-    stok_awal = int(input("Masukan jumlah stok baru: "))
-    stok_dict[kode] = {
+        stok_awal = int(input("Masukan jumlah stok: "))
+        stok_dict[kode] = {
         "nama": nama,
         "stok": stok_awal
     }
 
+    except ValueError:
+        print("Stok harus berupa angka")
+        return
+        
     print("Barang berhasil ditambahkan")
     
 # -----------------------------------------------------------
@@ -172,7 +168,7 @@ def main():
             print("Data berhasil disimpan")
 
         elif pilihan == "0":
-            print("Terima kasih. Program selesai.")
+            print("Terima kasih. Program selesai.") 
             break
 
         else:
@@ -181,3 +177,4 @@ def main():
 # Menjalankan program utama
 if __name__ == "__main__":
     main()
+
