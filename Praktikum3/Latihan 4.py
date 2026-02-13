@@ -1,26 +1,25 @@
 class Node:
     # Node merepresentasikan satu elemen dalam linked list.
     def __init__(self, data):
-        self.data = data # data: nilai yang disimpan pada node
-        self.next = None # next: referensi ke node berikutnya (None jika tidak ada)
+        self.data = data  # simpan nilai
+        self.next = None  # next -> node selanjutnya
         
 class LinkedList:
     # Implementasi singly linked list sederhana.    
     def __init__(self):
-        self.head = None # head: node pertama dalam list (None jika kosong)
+        self.head = None  # awal list
 
     def insert_at_end(self, data):
         # Menambahkan node baru di akhir linked list.
         # Jika list kosong, node baru menjadi head.
         new_node = Node(data)
         if not self.head:
-            self.head = new_node
+            self.head = new_node  # head = node baru
             return
-
         temp = self.head
         while temp.next:
             temp = temp.next
-        temp.next = new_node
+        temp.next = new_node  # sambung di akhir
 
     def delete_node(self, key):
         # Menghapus node pertama yang memiliki nilai sama dengan key.
@@ -30,13 +29,13 @@ class LinkedList:
         # Jika tidak ditemukan, beri tahu pengguna.
         temp = self.head
 
-        # Jika node pertama yang dihapus
+        # kalau head yg mau dihapus
         if temp and temp.data == key:
-            self.head = temp.next
+            self.head = temp.next  # geser head
             print(f"Elemen {key} berhasil dihapus.")
             return
 
-        prev = None
+        prev = None  # simpan node sebelumnya
         while temp and temp.data != key:
             prev = temp
             temp = temp.next
@@ -45,14 +44,14 @@ class LinkedList:
             print(f"Elemen {key} tidak ditemukan.")
             return
 
-        prev.next = temp.next
+        prev.next = temp.next  # lewati node yang dihapus
         print(f"Elemen {key} berhasil dihapus.")
 
     def display(self):
         # Menampilkan isi linked list dari head sampai akhir.
         temp = self.head
         while temp:
-            print(temp.data, end=" -> ")
+            print(temp.data, end=" -> ")  # cetak nilai
             temp = temp.next
         print("null")
         
@@ -73,7 +72,7 @@ class MergeLinkedList(LinkedList):
             temp = temp.next
 
         # Sambungkan akhir list1 ke awal list2
-        temp.next = list2.head
+        temp.next = list2.head  # gabung
         
 # Blok eksekusi utama:
 # Minta input dua daftar nilai untuk dua linked list,
@@ -85,12 +84,12 @@ list2 = MergeLinkedList()
 data1 = input("Masukkan elemen untuk Linked List 1 (pisahkan koma): ")
 if data1.strip() != "":
     for data in data1.split(","):
-        list1.insert_at_end(int(data.strip()))
+        list1.insert_at_end(int(data.strip()))  # tambah ke list1
 
 data2 = input("Masukkan elemen untuk Linked List 2 (pisahkan koma): ")
 if data2.strip() != "":
     for data in data2.split(","):
-        list2.insert_at_end(int(data.strip()))
+        list2.insert_at_end(int(data.strip()))  # tambah ke list2
 
 print("Linked List 1:")
 list1.display()
