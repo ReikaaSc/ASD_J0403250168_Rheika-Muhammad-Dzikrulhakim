@@ -1,18 +1,13 @@
 class Node:
     # Node merepresentasikan satu elemen dalam linked list.
-    # Atribut:
-    # - data: nilai yang disimpan pada node
-    # - next: referensi ke node berikutnya (None jika tidak ada)
     def __init__(self, data):
-        self.data = data
-        self.next = None
+        self.data = data # data: nilai yang disimpan pada node
+        self.next = None # next: referensi ke node berikutnya (None jika tidak ada)
         
 class LinkedList:
-    # Implementasi singly linked list sederhana.
-    # Atribut:
-    # - head: node pertama dalam list (None jika kosong)
+    # Implementasi singly linked list sederhana.    
     def __init__(self):
-        self.head = None
+        self.head = None # head: node pertama dalam list (None jika kosong)
 
     def insert_at_end(self, data):
         # Menambahkan node baru di akhir linked list.
@@ -30,9 +25,9 @@ class LinkedList:
     def delete_node(self, key):
         # Menghapus node pertama yang memiliki nilai sama dengan key.
         # Kasus yang ditangani:
-        # - Hapus head jika cocok.
-        # - Hapus node di tengah/akhir dengan menghubungkan prev.next ke temp.next.
-        # - Jika tidak ditemukan, beri tahu pengguna.
+        # Hapus head jika cocok.
+        # Hapus node di tengah/akhir dengan menghubungkan prev.next ke temp.next.
+        # Jika tidak ditemukan, beri tahu pengguna.
         temp = self.head
 
         # Jika node pertama yang dihapus
@@ -81,9 +76,9 @@ class MergeLinkedList(LinkedList):
         temp.next = list2.head
         
 # Blok eksekusi utama:
-# 1. Minta input dua daftar nilai untuk dua linked list,
-# 2. Bangun kedua linked list dengan memasukkan nilai di akhir,
-# 3. Tampilkan kedua list, gabungkan list2 ke list1, lalu tampilkan hasil gabungan.
+# Minta input dua daftar nilai untuk dua linked list,
+# Bangun kedua linked list dengan memasukkan nilai di akhir,
+# Tampilkan kedua list, gabungkan list2 ke list1, lalu tampilkan hasil gabungan.
 list1 = MergeLinkedList()
 list2 = MergeLinkedList()
 
