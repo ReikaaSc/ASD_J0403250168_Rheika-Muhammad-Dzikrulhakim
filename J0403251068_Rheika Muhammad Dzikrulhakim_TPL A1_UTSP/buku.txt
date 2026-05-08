@@ -1,0 +1,10 @@
+B001,Algoritma dan Pemrograman,150000
+B002,Struktur Data dengan Python,135000
+B003,Pengantar Machine Learning,200000
+B004,Pemrograman Web Dasar,120000
+B005,Basis Data Fundamental,140000
+B006,Kecerdasan Buatan Modern,210000
+B007,Analisis Algoritma,175000
+B008,Statistika untuk Data Science,160000
+B009,Pemrograman Berorientasi Objek,145000
+B010,Dasar Sistem Operasi,130000
